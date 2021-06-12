@@ -1,3 +1,9 @@
+<script>
+if (location.protocol !== 'https:') {
+  location.replace(`https:${location.href.substring(location.protocol.length)}`);
+  console.log('not https! redirecting');
+}
+</script>
 <style>
 .range {
   --ticksThickness: 2px;
