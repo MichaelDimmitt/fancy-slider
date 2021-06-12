@@ -7,3 +7,9 @@ it is a slider that is fancy
 1) rainbow gradient - https://stackoverflow.com/a/40557564/5283424
 2) input with type range and a wrapper that adds ticks https://stackoverflow.com/a/64306268/5283424
 3) make a few adjustments and position spans absolute to add labels
+
+## Deploy to surge.sh
+```bash
+surge surge/ fancy-slider.surge.sh
+```
+
