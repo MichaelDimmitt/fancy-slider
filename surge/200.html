@@ -1,3 +1,9 @@
+<script>
+if (location.protocol !== 'https:') {
+  location.replace(`https:${location.href.substring(location.protocol.length)}`);
+  console.log('not https! redirecting');
+}
+</script>
 <style>
 .range {
   --ticksThickness: 2px;
@@ -85,14 +91,15 @@
     background: -moz-linear-gradient(right, orange, yellow, green, cyan, blue, violet); /* For Firefox 3.6 to 15 */
     background: linear-gradient(to right, orange , yellow, green, cyan, blue, violet); /* Standard syntax (must be last) */
 }
-
-
+.dark { background-color: #292b2d; color: #eaeaea; }
 </style>
-<h5 class="di w5">How Do I currently Feel</h5>
-<div class="range" style="--step:1; --min:0; --max:10">
-  <span class="start label" title="youch" alt="0">🙁</span>
-  <span class="mid1 label" title="Feels like a wednesday" alt="4">🙃</span>
-  <span class="mid2 label" title="I feel fine" alt="7">🙂</span>
-  <span class="end label" title="10 out of 10!" alt="10">🤩</span>
-  <input type="range" class="slider" min="0" max="10" step="1" value="3">
-</div>
+<html class="dark">
+  <h5 class="di w5">How Do I currently Feel</h5>
+  <div class="range" style="--step:1; --min:0; --max:10">
+    <span class="start label" title="youch" alt="0">🙁</span>
+    <span class="mid1 label" title="Feels like a wednesday" alt="4">🙃</span>
+    <span class="mid2 label" title="I feel fine" alt="7">🙂</span>
+    <span class="end label" title="10 out of 10!" alt="10">🤩</span>
+    <input type="range" class="slider" min="0" max="10" step="1" value="3">
+  </div>
+</html>
